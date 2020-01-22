@@ -15,11 +15,8 @@ module.exports ={
         const {nome, email, cpf, cnpj, telefone, login, senha, confirmSenha} = request.body;
 
         if(!email.match(emailRegex)) {
-            return response.json('O e-mail informa está inválido')
+            return response.json('O E-mail informa está inválido.')
             }
-            console.log(senha)
-            console.log(confirmSenha)
-            
         if(senha !== confirmSenha) {
             return response.json('Senhas não conferem.')
             }
@@ -28,7 +25,7 @@ module.exports ={
         let represent = await Represent.findOne({login}) 
         if(represent){
             return response.json('Já existe Usuario cadastrado com o mesmo login!');
-        } else{
+        }else{
             represent = await Represent.create({
             
             nome,
@@ -41,7 +38,7 @@ module.exports ={
         
         })}
     
-        return response.json(represent);
+        return response.json('Usuario cadastrado com sucesso!');
     
     }  
 
