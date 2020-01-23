@@ -13,8 +13,8 @@ module.exports={
     const token = jwt.sign(represent, env.authSecret, {
     expiresIn: "1 day"
     })
-    const { nome, email } = represent
-    response.json({ nome, email, token })
+    const { nome, email, nivel } = represent
+    response.json({ nome, email, nivel, token })
     } else {
     return res.status(400).send({errors: ['Usuário/Senha inválidos']})
     }

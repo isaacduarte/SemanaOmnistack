@@ -8,6 +8,7 @@ const RepresentSchema =  new mongoose.Schema({
     cnpj: String,
     telefone: String,
     login: String,
+    nivel: String,
     senha: String
 });
 
