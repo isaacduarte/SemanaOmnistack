@@ -34,7 +34,7 @@ module.exports ={
             cnpj,
             telefone,
             login,
-            nivel=2, 
+            nivel:'2', 
             senha: passwordHash,
         
         })}
